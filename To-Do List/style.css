@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: url(https://images.unsplash.com/photo-1562043236-559c3b65a6e2?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    padding: 10px;
+}
+
+.todo-box{
+    width: 100%;
+    max-width: 540px;
+    background: rgba(28, 192, 178, 0.308);
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 23px;
+
+}
+
+.todo-box h2{
+    display: flex;
+    color: black;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: gainsboro;
+    border-radius: 30px;
+    padding: 0px 0px 0px 20px;
+    margin: 0px 0px 25px 0px;
+}
+
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+
+button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #4845ff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 27px;
+    width: 27px;
+    border-radius: 50%;
+    background-image: url(images/circle.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked{
+    color: #8b8b8b;
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background-image: url(images/check.png);
+}
+
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #faf9f9;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover{
+    background: #edeef0;
+    color: gray;
+}
+
+@media screen and (max-width: 500px) {
+    .todo-box{
+        max-width: 80%;
+    }
+
+    .search{
+        width: 90%;
+    }
+    
+    #search-box{
+        width: 90%;
+    }
+
+    button{
+        padding: 16px 33px;
+    }
+    
+}
